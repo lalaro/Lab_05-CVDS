@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Todo Details</title>
+</head>
+<body>
+    <h1>Todo Details</h1>
+    <p>Title: <span th:text="${todo.title}"></span></p>
+    <p>Completed: <span th:text="${todo.completed} ? 'Yes' : 'No'"></span></p>
+    
+    <!-- Enlace para ir a la página de inicio -->
+    <a href="/index.html" class="btn btn-primary">Go to Home</a>
+</body>
+</html>
