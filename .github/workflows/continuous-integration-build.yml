@@ -39,3 +39,6 @@ jobs:
       - name: Build Complete with Gradle
         working-directory: ./complete
         run: ./gradlew build
+
+      - name: Exclude target directory from README.adoc
+        run: sed -i '/target/d' README.adoc
