@@ -5,10 +5,11 @@
 </head>
 <body>
     <h1>Todo Details</h1>
+    <p>User: <span th:text="${todo.userId}"></span></p>
+    <p>ID: <span th:text="${todo.id}"></span></p>
     <p>Title: <span th:text="${todo.title}"></span></p>
     <p>Completed: <span th:text="${todo.completed} ? 'Yes' : 'No'"></span></p>
-    
-    <!-- Enlace para ir a la página de inicio -->
+
     <a href="/index.html" class="btn btn-primary">Go to Home</a>
 </body>
 </html>

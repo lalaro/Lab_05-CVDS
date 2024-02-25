@@ -7,6 +7,23 @@ public class Todo {
     public Todo() {
     }
 
+    public Todo getTodo() {
+
+        Todo todo = restTemplate.getForObject(API_URL, Todo.class);
+        
+        log.info("Got TODO: " + todo);
+        
+        return todo;
+    }
+
+    public Todo(int userId, int id, String title, boolean completed) {
+        this.userId = userId;
+        this.id = id;
+        this.title = title;
+        this.completed = completed;
+    }
+
+    // Getters y setters
     public int getUserId() {
         return userId;
     }
