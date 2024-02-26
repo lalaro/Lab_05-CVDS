@@ -237,7 +237,7 @@ Para la parte de construcción de directorios, es importante tener en cuenta que
 ## PARTE III. - APLICACIÓN MVC PARA CONSUMO DE SERVICIO RESTful
 Usando la arquitectura MVC del punto anterior (el proyecto anterior), realice una aplicación simple qué permita navegar gráficamente sobre esta API https://jsonplaceholder.typicode.com/todos/1, puede guiarse de tutoriales como https://medium.com/@nutanbhogendrasharma/consume-rest-api-in-spring-boot-web-application-354c404850f0
 
-
+<img src="Image8.jpeg" alt="i8" width="1000"/>
 
 Luego de terminada esta parte responda: 
 - ¿Qué es RESTful? 
@@ -253,4 +253,11 @@ El uso de un framework de CSS como Bootstrap para mejorar el diseño y la aparie
 
 Y vamos a implementar la lógica de nuestro juego: 1. Se trata de un juego en línea para adivinar un número, en el que el ganador, si acierta en la primera oportunidad, recibe $100.000. Luego, por cada intento fallido, el premio se reduce en $10.000, como en los juegos de apuesta, es natural qué quede en saldos negativos. 2. El número a adivinar debe ser generado en cada intento y comparado con el número qué el usuario está insertando, es un número de 1 a 10. 3. Debe existir un botón de reset, qué permita al jugador iniciar de nuevo. 4. La capa de controlador debe procer el número del usuario mediante método POST.
 
-Analice las siguientes situaciones: - ¿Qué pasa si abro el sitio de juegos en dos navegadores difententes? - Si quisiera qué a cada jugador le aparecieran independientemente sus respectivos saldos. ¿Qué habría que hacer?
+<img src="Image9.jpeg" alt="i9" width="1000"/>
+
+<img src="Image10.jpeg" alt="i10" width="1000"/>
+
+Analice las siguientes situaciones: - ¿Qué pasa si abro el sitio de juegos en dos navegadores difententes? 
+Cuando se abre el sitio de juegos en dos navegadores diferentes, es probable que cada navegador cree una sesión independiente del juego. Esto significa que cada navegador mantendrá su propio estado de sesión, incluido el saldo del jugador, las acciones realizadas y cualquier otra información relacionada con el juego. En otras palabras, aunque estés usando la misma cuenta de jugador en ambos navegadores, el estado de tu juego será independiente en cada uno de ellos. Esto puede llevar a inconsistencias si se realiza acciones en uno de los navegadores que no se reflejan en el otro debido a la falta de sincronización entre las sesiones.
+- Si quisiera qué a cada jugador le aparecieran independientemente sus respectivos saldos. ¿Qué habría que hacer?
+Para lograr que a cada jugador le aparezcan independientemente sus respectivos saldos, es necesario implementar un sistema de gestión de cuentas y sesiones que permita mantener los saldos de forma individualizada para cada usuario que inicie sesión en el sitio de juegos

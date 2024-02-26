@@ -1,0 +1,18 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Se adivino el juego</title>
+</head>
+
+<body>
+
+  <div th:if="${resultado == 'adivino'}"> 
+    Adivinaste el número, felicidades!
+  </div>
+
+  <div th:if="${resultado == 'fallo'}">
+    Lo siento, intenta adivinar de nuevo! 
+  </div>
+
+</body>
+</html>
